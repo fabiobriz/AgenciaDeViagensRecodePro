@@ -4,25 +4,25 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Pacotes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar novo pacote</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Tipo)
+                Promocional
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FkClienteIdClienteNavigation)
+                Cliente
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FkHospedagemIdHospedagemNavigation)
+                Hospedagem
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FkPassagemIdPassagemNavigation)
+                Destino
             </th>
             <th></th>
         </tr>
@@ -34,13 +34,13 @@
                 @Html.DisplayFor(modelItem => item.Tipo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FkClienteIdClienteNavigation.IdCliente)
+                @Html.DisplayFor(modelItem => item.FkClienteIdClienteNavigation.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FkHospedagemIdHospedagemNavigation.IdHospedagem)
+                @Html.DisplayFor(modelItem => item.FkHospedagemIdHospedagemNavigation.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FkPassagemIdPassagemNavigation.IdPassagem)
+                @Html.DisplayFor(modelItem => item.FkPassagemIdPassagemNavigation.LocalChegada)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdPacote">Edit</a> |
