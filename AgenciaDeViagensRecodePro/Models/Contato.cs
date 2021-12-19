@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 
 namespace AgenciaDeViagensRecodePro.Models
 {
-    public class Contato
+    public partial class Contato
     {
         public int IdContato { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-
         public string Mensagem { get; set; }
     }
 }

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 
 <div>
     <h4>Pacote</h4>
@@ -17,26 +17,26 @@
             @Html.DisplayFor(model => model.Tipo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FkClienteIdClienteNavigation)
+            @Html.DisplayNameFor(model => model.FkClienteIdClienteNavigation.Nome)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FkClienteIdClienteNavigation.IdCliente)
+            @Html.DisplayFor(model => model.FkClienteIdClienteNavigation.Nome)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FkHospedagemIdHospedagemNavigation)
+            Hospedagem
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FkHospedagemIdHospedagemNavigation.IdHospedagem)
+            @Html.DisplayFor(model => model.FkHospedagemIdHospedagemNavigation.Nome)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FkPassagemIdPassagemNavigation)
+            @Html.DisplayNameFor(model => model.FkPassagemIdPassagemNavigation.DataPartida)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FkPassagemIdPassagemNavigation.IdPassagem)
+            @Html.DisplayFor(model => model.FkPassagemIdPassagemNavigation.DataPartida)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.IdPacote">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.IdPacote">Editar</a> |
+    <a asp-action="Index">Voltar a lista</a>
 </div>

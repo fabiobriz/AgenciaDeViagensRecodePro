@@ -23,7 +23,12 @@ namespace AgenciaDeViagensRecodePro.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Destinos()
+        {
+            return View();
+        }
+
+        public IActionResult Promocoes()
         {
             return View();
         }

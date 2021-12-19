@@ -1,0 +1,60 @@
+﻿<div class="m-5 text-center">
+    <h1>Obrigado por entrar em contato.</h1>
+    <h3>Em breve retornaremos sua mensagem.</h3>
+</div>
+
+
+
+@*@model IEnumerable<AgenciaDeViagensRecodePro.Models.Contato>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mensagem)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mensagem)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdContato">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdContato">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdContato">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@

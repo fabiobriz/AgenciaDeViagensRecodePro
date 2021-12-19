@@ -1,71 +1,112 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿html {
+    --cor-principal: rgb(0, 0, 0);
+    --cor-secundaria: rgb(255, 255, 255);
+    --cor-destaque: rgb(255, 166, 0);
+    list-style-type: none;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.navbar {
+    border-bottom: solid 7px var(--cor-destaque)
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.navbar-brand {
+    font-size: 1.8em;
+    border: solid 2px var(--cor-destaque);
+    padding: 0.4em;
+    border-radius: 10px;
+    font-weight: 700;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    .navbar-brand:hover {
+        box-shadow: 0 0 10px 1px var(--cor-destaque);
+    }
+
+.nav-items {
+    font-size: 1.3em;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.nav-item:hover {
+    font-weight: 600;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.img-top {
+    border-bottom: solid 7px var(--cor-destaque)
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.description {
+    font-weight: bolder;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.img-gp1 {
+    max-height: 70vh;
+    border-radius: 30px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+.sub-gp1 {
+    color: var(--cor-destaque);
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+.gp2 {
+    border: solid 5px var(--cor-destaque);
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px black;
+}
+
+footer {
+    border-top: solid 5px var(--cor-destaque);
+    border-bottom: solid 5px var(--cor-destaque);
+}
+
+.icon-btn {
+    color: var(--cor-destaque);
+    border-radius: 50px;
+    border: solid 1px var(--cor-destaque)
+}
+
+.nav-footer {
+    font-size: 1.5rem;
+}
+
+.nav-botton a {
+    padding: 0 15px;
+}
+
+.copyright {
+    color: var(--cor-destaque);
+    font-weight: lighter;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card-destinos {
+    border-top: solid 5px var(--cor-destaque);
+}
+
+/* dasdasdasda */
+
+.card {
+    width: 95%;
+    padding: 0px;
+    margin-left: 2%
+}
+
+.card-title a {
+    color: var(--cor-principal);
+}
+
+.card-footer {
+    background-color: var(--cor-destaque);
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.price {
+    color: var(--cor-destaque);
+    font-weight: 600;
 }

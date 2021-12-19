@@ -49,9 +49,9 @@ namespace AgenciaDeViagensRecodePro.Controllers
         // GET: Pacotes/Create
         public IActionResult Create()
         {
-            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "IdCliente");
-            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "IdHospedagem");
-            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "IdPassagem");
+            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "Nome");
+            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "Nome");
+            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "DataPartida");
             return View();
         }
 
@@ -68,9 +68,9 @@ namespace AgenciaDeViagensRecodePro.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "IdCliente", pacote.FkClienteIdCliente);
-            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "IdHospedagem", pacote.FkHospedagemIdHospedagem);
-            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "IdPassagem", pacote.FkPassagemIdPassagem);
+            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "Nome", pacote.FkClienteIdCliente);
+            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "Nome", pacote.FkHospedagemIdHospedagem);
+            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "DataPartida", pacote.FkPassagemIdPassagem);
             return View(pacote);
         }
 
@@ -87,9 +87,9 @@ namespace AgenciaDeViagensRecodePro.Controllers
             {
                 return NotFound();
             }
-            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "IdCliente", pacote.FkClienteIdCliente);
-            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "IdHospedagem", pacote.FkHospedagemIdHospedagem);
-            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "IdPassagem", pacote.FkPassagemIdPassagem);
+            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "Nome");
+            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "Nome");
+            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "DataPartida");
             return View(pacote);
         }
 
@@ -125,9 +125,9 @@ namespace AgenciaDeViagensRecodePro.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "IdCliente", pacote.FkClienteIdCliente);
-            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "IdHospedagem", pacote.FkHospedagemIdHospedagem);
-            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "IdPassagem", pacote.FkPassagemIdPassagem);
+            ViewData["FkClienteIdCliente"] = new SelectList(_context.Cliente, "IdCliente", "Nome", pacote.FkClienteIdCliente);
+            ViewData["FkHospedagemIdHospedagem"] = new SelectList(_context.Hospedagem, "IdHospedagem", "Nome", pacote.FkHospedagemIdHospedagem);
+            ViewData["FkPassagemIdPassagem"] = new SelectList(_context.Passagem, "IdPassagem", "DataPartida", pacote.FkPassagemIdPassagem);
             return View(pacote);
         }
 
